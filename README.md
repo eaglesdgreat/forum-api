@@ -1,1 +1,1 @@
-# Getting Started with Node Backend Forum App
+# Getting Started with Node Backend Forum API
