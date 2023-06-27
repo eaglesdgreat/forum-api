@@ -1,0 +1,7 @@
+scalar Date
+
+union ThreadResult = Thread | EntityResult
+union ThreadArrayResult = ThreadArray | EntityResult
+union ThreadItemArrayResult = ThreadItemArray | EntityResult
+union UserResult = User | EntityResult
+union ThreadCategoriesArrayResult = ThreadCategoryArray | EntityResult

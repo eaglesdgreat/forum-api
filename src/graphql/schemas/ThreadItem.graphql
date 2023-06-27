@@ -1,0 +1,26 @@
+type ThreadItem {
+  id: ID!
+  views: Int!
+  points: Int!
+  isDisabled: Boolean!
+  body: String!
+  user: User!
+  thread: Thread!
+  createdBy: String!
+  createdOn: Date!
+  lastModifiedBy: String!
+  lastModifiedOn: Date!
+}
+
+type ThreadItemArray {
+  threadItems: [ThreadItem!]
+}
+
+extend type Query {
+  getThreadItemsByThreadId(threadId: ID!): ThreadItemArray
+}
+
+extend type Mutation {
+  createThreadItem(userId: ID! threadId: ID! body: String!): EntityResult
+  updateThreadItemPoint(userId: ID! threadItemId: ID! increment: Boolean!): EntityResult
+}

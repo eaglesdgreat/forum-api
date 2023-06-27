@@ -1,0 +1,22 @@
+type ThreadCategory {
+  id: ID!
+  name: String!
+  description: String
+  threads: [Thread!]!
+  createdBy: String!
+  createdOn: Date!
+  lastModifiedBy: String!
+  lastModifiedOn: Date!
+}
+
+type ThreadCategoryArray {
+  categories: [ThreadCategory!]
+}
+
+extend type Query {
+  getAllCategories: ThreadCategoriesArrayResult
+}
+
+extend type Mutation {
+  createThreadCategory(name: String! description: String): EntityResult
+}
